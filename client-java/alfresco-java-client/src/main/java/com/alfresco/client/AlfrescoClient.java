@@ -49,6 +49,8 @@ public class AlfrescoClient extends AbstractClient<AlfrescoClient>
 
     protected CommentsAPI commentsAPI;
 
+    protected DictionaryAPI dictionaryAPI;
+
     protected NodesAPI nodesAPI;
 
     protected PeopleAPI peopleAPI;
@@ -114,6 +116,15 @@ public class AlfrescoClient extends AbstractClient<AlfrescoClient>
             commentsAPI = getAPI(CommentsAPI.class);
         }
         return commentsAPI;
+    }
+
+    public DictionaryAPI getDictionaryAPI()
+    {
+        if (dictionaryAPI == null)
+        {
+            dictionaryAPI = getAPI(DictionaryAPI.class);
+        }
+        return dictionaryAPI;
     }
 
     public FavoritesAPI getFavoritesAPI()
